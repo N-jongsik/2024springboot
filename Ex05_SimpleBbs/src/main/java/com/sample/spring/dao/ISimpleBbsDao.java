@@ -10,4 +10,9 @@ public interface ISimpleBbsDao {
 	public Integer countDao();
 
 	public SimpleBbsDto viewDao(String id);
+
+	public int writeDao(String writer, String title, String content); // id는 자동으로 증가함
+
+	public int delete(String id);
+
 }
