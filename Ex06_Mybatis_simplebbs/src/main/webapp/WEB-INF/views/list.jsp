@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+글 갯수 : ${count }
 <table width="500" cellpadding="0" cellspacing="0" border="1">
     <tr>
         <td>번호</td>
