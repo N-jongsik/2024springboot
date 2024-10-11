@@ -1,6 +1,5 @@
 package com.sample.spring.api;
 
-import java.time.ZonedDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +29,7 @@ public class FoodApi {
 
 	@GetMapping("/food/{foodId}")
 	public FoodDetailView viewFood(@PathVariable("foodId") Long foodId) {
-		return FoodDetailView.builder().id(0L).name("testname").address("testaddress").createdAt(ZonedDateTime.now())
-				.updateAt(ZonedDateTime.now()).menus(List.of(FoodDetailView.Menu.builder().foodId(0L).name("testname")
-						.price(100000).createdAt(ZonedDateTime.now()).updateAt(ZonedDateTime.now()).build()))
-				.build();
+		return foodService.getFoodDetail(foodId);
 	}
 
 	@PostMapping("/food")
