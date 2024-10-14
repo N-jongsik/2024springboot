@@ -27,7 +27,7 @@ public class FoodService {
 	@Transactional
 	public FoodEntity createFood(CreateAndEditFoodRequest request) {
 		FoodEntity food = FoodEntity.builder().name(request.getName()).address(request.getAddress())
-				.createdAt(ZonedDateTime.now()).updateAt(ZonedDateTime.now()).build();
+				.createdAt(ZonedDateTime.now()).updateAt(ZonedDateTime.now()).build(); // dto를 entity로 변환
 		foodRepository.save(food); // db에 저장
 
 		request.getMenus().forEach((menu) -> {

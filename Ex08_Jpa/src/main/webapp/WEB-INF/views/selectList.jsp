@@ -15,7 +15,7 @@
 페이지 넘버: ${pageNumber }<br>
 number of element: ${numberOfElements }<br>
 	<c:forEach var="member" items="${members}">
-		${member.name} / ${member.name} /${member.email }
+		${member.name} / ${member.createDate} /${member.email }
 		<hr>
 	</c:forEach>
 </body>
